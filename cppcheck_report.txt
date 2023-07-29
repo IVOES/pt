@@ -1,0 +1,20 @@
+example_nc.c:33:19: style: The scope of the variable 'b' can be reduced. [variableScope]
+  static uint8_t *b;
+                  ^
+example_nc.c:21:5: error: Syntax Error: AST broken, binary operator '=' doesn't have two operands. [internalAstError]
+    pt_sys(pt, r = read(STDIN_FILENO, &b, 1));
+    ^
+pt_test.c:167:10: style: Variable '*state' is reassigned a value before the old one has been used. [redundantAssignment]
+  *state = -1;
+         ^
+pt_test.c:162:10: note: *state is assigned
+ (*state)++;
+         ^
+pt_test.c:167:10: note: *state is overwritten
+  *state = -1;
+         ^
+pt_test.c:11:3: error: Syntax Error: AST broken, binary operator '=' doesn't have two operands. [internalAstError]
+  pt_label(pt, 1);
+  ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
